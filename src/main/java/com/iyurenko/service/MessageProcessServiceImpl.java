@@ -4,6 +4,8 @@ import com.iyurenko.CamelApplication;
 import com.iyurenko.dao.domain.Thing;
 import com.iyurenko.dao.repository.ThingRepository;
 import com.sun.mail.smtp.SMTPTransport;
+import org.apache.camel.CamelContext;
+import org.apache.camel.ProducerTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ public class MessageProcessServiceImpl implements MessageProcessService {
 
     @Autowired
     private ThingRepository repository;
+
+    @Autowired
+    private CamelContext camelContext;
 
     private static final Logger log = LoggerFactory.getLogger(CamelApplication.class);
 

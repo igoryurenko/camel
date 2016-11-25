@@ -1,13 +1,14 @@
 package com.iyurenko.dao.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by iyurenko on 22.11.16.
  */
 
 @Entity(name = "thing")
-public class Thing {
+public class Thing implements Serializable{
 
     public Thing() {}
 
